@@ -1,0 +1,26 @@
+@import "../styles/vars.scss";
+
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input {
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  color : $text
+}

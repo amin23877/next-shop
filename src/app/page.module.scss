@@ -1,3 +1,33 @@
 .container {
   padding: 32px 120px 0px 120px;
 }
+.hero {
+  margin: 16px 0px;
+  display: flex;
+  height: 373px;
+  width: 100%;
+  gap: 16px;
+}
+.leftHero {
+  width: 25%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.rightHero {
+  width: calc(75% - 16px);
+  border-radius: 24px;
+  overflow: hidden;
+}
+.twoBanner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+.banner {
+  width: 100%;
+  height: 210px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: red;
+}

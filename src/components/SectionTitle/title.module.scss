@@ -1,0 +1,32 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixin.scss";
+
+.container {
+  @include flex-center;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.link {
+  @include flex-center;
+  gap: 7px;
+}
+.devider {
+  flex: 1;
+  color: $light-pink;
+  margin: 24px;
+}
+.title {
+  color: $title;
+  font-weight: 900;
+}
+.icon {
+  @include flex-center;
+  fill: $pink-linear;
+
+  width: 40px;
+  height: 40px;
+
+  background: $light-gray;
+  border-radius: 26px;
+}

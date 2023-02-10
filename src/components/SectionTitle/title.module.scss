@@ -2,31 +2,33 @@
 @import "../../styles/mixin.scss";
 
 .container {
-  @include flex-center;
-  width: 100%;
-  margin-top: 70px;
-  margin-bottom: 30px;
+    @include flex-center;
+    width: 100%;
+    margin-bottom: 30px;
 }
 .link {
-  @include flex-center;
-  gap: 7px;
+    @include flex-center;
+    gap: 7px;
+    cursor: pointer;
 }
 .devider {
-  flex: 1;
-  color: $light-pink;
-  margin: 24px;
+    flex: 1;
+    color: $light-pink;
+    margin: 0px 24px;
+    border: 1px solid $light-pink;
 }
 .title {
-  color: $title;
-  font-weight: 900;
+    color: $title;
+    font-weight: 900;
 }
 .icon {
-  @include flex-center;
-  fill: $pink-linear;
+    @include flex-center;
+    fill: #f23b51;
 
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: 12px;
 
-  background: $light-gray;
-  border-radius: 26px;
+    background: $light-gray;
+    border-radius: 26px;
 }

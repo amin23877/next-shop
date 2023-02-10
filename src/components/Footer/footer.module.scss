@@ -1,0 +1,55 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixin.scss";
+
+.container {
+    padding-top: 48px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 4px;
+    width: 250px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 188px;
+    align-items: flex-end;
+}
+
+.enamad {
+    @include flex-center;
+    width: 134px;
+    height: 134px;
+
+    background: $light-gray;
+    border-radius: 16px;
+}
+
+.icons {
+    @include flex-bet;
+    gap: 12px;
+}
+
+.icon {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+
+    background: $light-gray;
+    border-radius: 24px;
+}
+
+.contactLink {
+    display: flex;
+    gap: 10px;
+}

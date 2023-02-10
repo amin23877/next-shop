@@ -1,33 +1,94 @@
+@import "../styles/vars.scss";
+@import "../styles/mixin.scss";
+
 .container {
-  padding: 32px 120px 0px 120px;
+    padding: 32px 120px 20px 120px;
 }
 .hero {
-  margin: 16px 0px;
-  display: flex;
-  height: 373px;
-  width: 100%;
-  gap: 16px;
+    margin: 16px 0px;
+    display: flex;
+    height: 373px;
+    width: 100%;
+    gap: 16px;
 }
 .leftHero {
-  width: 25%;
-  border-radius: 24px;
-  overflow: hidden;
+    width: 25%;
+    border-radius: 24px;
+    overflow: hidden;
 }
 .rightHero {
-  width: calc(75% - 16px);
-  border-radius: 24px;
-  overflow: hidden;
+    width: calc(75% - 16px);
+    border-radius: 24px;
+    overflow: hidden;
 }
 .twoBanner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 60px;
 }
 .banner {
-  width: 100%;
-  height: 210px;
-  border-radius: 24px;
-  overflow: hidden;
-  background-color: red;
+    width: 100%;
+    height: 210px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: red;
+}
+.rightBanner {
+    width: 100%;
+    grid-row-end: span 2;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: green;
+}
+.leftBanner {
+    width: 100%;
+    height: 189px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: green;
+}
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 299px;
+    padding: 40px;
+}
+.linksContainer {
+    width: 888px;
+    height: 155px;
+    background: $pink-linear;
+    color: white;
+    border-radius: 24px;
+    padding: 32px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.links {
+    @include flex-center;
+    gap: 12px;
+}
+.link {
+    @include flex-center;
+    gap: 8px;
+    background: #ffffff14;
+    border-radius: 24px;
+    padding: 16px 12px 16px 12px;
+}
+
+.linkBanner {
+    position: absolute;
+    width: 230px;
+    height: 277px;
+    left: 56px;
+    bottom: 0px;
+    overflow: hidden;
+    background-color: aqua;
 }

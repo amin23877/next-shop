@@ -1,0 +1,25 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixin.scss";
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 70px;
+}
+
+.rightBanner {
+    grid-row-end: span 3;
+    background: wheat;
+    border-radius: 24px;
+}
+
+.offer {
+    padding: 12px;
+    gap: 4px;
+
+    height: 112px;
+
+    background: $light-gray;
+    border-radius: 24px;
+}

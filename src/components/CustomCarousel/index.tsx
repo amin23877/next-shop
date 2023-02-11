@@ -15,53 +15,53 @@ import ArrowLeft from "@/assets/carousel/ArrowLeft.svg";
 import styles from "./carousel.module.scss";
 
 type Props = {
-  items: ReactNode[];
-  count: number;
-  loop?: boolean;
+    items: ReactNode[];
+    count: number;
+    loop?: boolean;
 };
 
-export default function Carousel({ items, count , loop }: Props) {
-  const swiperRef = useRef<SwiperCore>();
+export default function Carousel({ items, count, loop }: Props) {
+    const swiperRef = useRef<SwiperCore>();
 
-  const onInit = (Swiper: SwiperCore): void => {
-    swiperRef.current = Swiper;
-  };
+    const onInit = (Swiper: SwiperCore): void => {
+        swiperRef.current = Swiper;
+    };
 
-  return (
-    <div className={styles.main}>
-      <div
-        className={styles.arrowRight}
-        onClick={() => {
-          swiperRef.current ? swiperRef.current.slidePrev() : "";
-        }}
-      >
-        <ArrowRight />
-      </div>
-      <Swiper
-        onInit={onInit}
-        spaceBetween={0}
-        slidesPerView={count}
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        className="swiper"
-        loop={loop}
-      >
-        {items &&
-          items.map((item: ReactNode, index: number) => {
-            return (
-              <SwiperSlide key={index} onClick={(e) => {}}>
-                {item}
-              </SwiperSlide>
-            );
-          })}
-      </Swiper>
-      <div
-        className={styles.arrowLeft}
-        onClick={() => {
-          swiperRef.current ? swiperRef.current.slideNext() : "";
-        }}
-      >
-        <ArrowLeft />
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.main}>
+            <div
+                className={styles.arrowRight}
+                onClick={() => {
+                    swiperRef.current ? swiperRef.current.slidePrev() : "";
+                }}
+            >
+                <ArrowRight />
+            </div>
+            <Swiper
+                onInit={onInit}
+                spaceBetween={0}
+                slidesPerView={count}
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                className="swiper"
+                loop={true}
+            >
+                {items &&
+                    items.map((item: ReactNode, index: number) => {
+                        return (
+                            <SwiperSlide key={index} onClick={(e) => {}}>
+                                {item}
+                            </SwiperSlide>
+                        );
+                    })}
+            </Swiper>
+            <div
+                className={styles.arrowLeft}
+                onClick={() => {
+                    swiperRef.current ? swiperRef.current.slideNext() : "";
+                }}
+            >
+                <ArrowLeft />
+            </div>
+        </div>
+    );
 }

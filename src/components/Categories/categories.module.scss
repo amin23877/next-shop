@@ -10,8 +10,12 @@
 .leftBanner {
     width: 400px;
     height: 368px;
-    background: rebeccapurple;
+    background-color: white;
     translate: 0px -80px;
+    background: url(../../assets/mock/cart.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .cats {
@@ -34,4 +38,24 @@
 
     background: #f2f2f2;
     border-radius: 16px;
+}
+.title {
+    font-weight: bold;
+    color: $title;
+}
+@media (max-width: $medium) {
+    .leftBanner {
+        display: none;
+    }
+    .container {
+        margin-bottom: 24px;
+        gap: 8px;
+    }
+    .cat {
+        width: 120px;
+    }
+    .cats {
+        gap: 8px;
+        justify-content: center;
+    }
 }

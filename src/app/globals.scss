@@ -1,26 +1,60 @@
 @import "../styles/vars.scss";
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-input {
-  padding: 0;
-  background: none;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+body {
+    color: $text;
 }
 
-*{
-  box-sizing: border-box;
+@font-face {
+    font-family: "IranSans";
+    src: url("../assets/fonts/woff/IRANSansWeb_Black.woff");
+    font-weight: 900;
+    font-style: normal;
 }
-body{
-  color : $text
+
+@font-face {
+    font-family: "IranSans";
+    src: url("../assets/fonts/woff/IRANSansWeb_Bold.woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "IranSans";
+    src: url("../assets/fonts/woff/IRANSansWeb_Light.woff");
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: "IranSans";
+    src: url("../assets/fonts/woff/IRANSansWeb.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "IranSans";
+    src: url("../assets/fonts/woff/IRANSansWeb_Medium.woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: IranSans;
+    font-size: $primary-size;
 }

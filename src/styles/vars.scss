@@ -1,12 +1,15 @@
 $pink-linear: linear-gradient(252.18deg, #d72339 0.28%, #f23b51 93.8%);
 $light-gray: #f7f7f7;
 $light-pink: #ffe9ee;
+$disabled: #bdbdbd;
 
 $text: #4f4f4f;
 $title: #212121;
 // font sizes
-$primary-size: 16px;
-$secondary-size: 14px;
-$tertiary-size: 12px;
+$primary-size: 14px;
+$title-size: 16px;
 $header-size: 18px;
-$title-size: 24px;
+$big-size: 20px;
+
+//break points
+$medium: 1200px;

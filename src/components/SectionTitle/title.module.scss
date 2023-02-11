@@ -20,6 +20,7 @@
 .title {
     color: $title;
     font-weight: 900;
+    font-size: $header-size;
 }
 .icon {
     @include flex-center;
@@ -31,4 +32,16 @@
 
     background: $light-gray;
     border-radius: 26px;
+}
+
+@media (max-width: $medium) {
+    .link {
+        display: none;
+    }
+    .title {
+        font-size: $title-size;
+    }
+    .devider {
+        margin-left: 0px;
+    }
 }

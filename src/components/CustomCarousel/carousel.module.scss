@@ -1,24 +1,37 @@
 @import "../../styles/mixin.scss";
+@import "../../styles/vars.scss";
 
 .main {
-  @include flex-center;
-  width: 100%;
-  position: relative;
+    @include flex-center;
+    width: 100%;
+    position: relative;
 }
 
 @mixin arrow {
-  display: flex;
-  z-index: 10;
-  cursor: pointer;
-  position: absolute;
+    display: flex;
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    height: 92px;
+    width: 38.5px;
 }
 
 .arrowRight {
-  @include arrow;
-  right: 0;
+    @include arrow;
+    right: 0;
+    translate: 3px;
 }
 
 .arrowLeft {
-  @include arrow;
-  left: 0;
+    @include arrow;
+    left: 0;
+    translate: -3px;
+}
+
+@media (max-width: $medium) {
+    .arrowLeft,
+    .arrowRight {
+        width: 29px;
+        height: 70px;
+    }
 }

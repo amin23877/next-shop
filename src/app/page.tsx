@@ -1,47 +1,43 @@
-import Carousel from "@/components/CustomCarousel";
-import Header from "@/components/Header";
-import ProductList from "@/components/ProductList";
-import SectionTitle from "@/components/SectionTitle";
-
 import Ticket from "@/assets/header/Ticket.svg";
 import Category from "@/assets/header/Category.svg";
 import Fire from "@/assets/header/Fire.svg";
 import Star from "@/assets/Star.svg";
+import Logo from "@/assets/header/Logo.svg";
+import myket from "@/assets/download/Myket.png";
+import android from "@/assets/download/Android.png";
+import bazar from "@/assets/download/Bazar.png";
+import mobile from "@/assets/download/Mobile.png";
+import banner3 from "@/assets/mock/banner3.png";
 
-import styles from "./page.module.scss";
+import Header from "@/components/Header";
+import ProductList from "@/components/ProductList";
+import SectionTitle from "@/components/SectionTitle";
 import Categories from "@/components/Categories";
 import Offers from "@/components/Offers";
 import Footer from "@/components/Footer";
+import CarouselBanners from "@/components/CarouselBanners";
+
+import styles from "./page.module.scss";
+import Image from "next/image";
 
 export default function Home() {
-    let items = [
-        <div key={Math.random()} style={{ width: "100%", height: "373px", background: "blue" }}></div>,
-        <div key={Math.random()} style={{ width: "100%", height: "373px", background: "green" }}></div>,
-        <div key={Math.random()} style={{ width: "100%", height: "373px", background: "red" }}></div>,
-        <div key={Math.random()} style={{ width: "100%", height: "373px", background: "blue" }}></div>,
-        <div key={Math.random()} style={{ width: "2000px", height: "373px", background: "red" }}></div>,
-    ];
-
     return (
         <main className={styles.container}>
-            <Header />
-            <div className={styles.hero}>
-                <div className={styles.leftHero}>
-                    <Carousel items={items} count={1} loop />
-                </div>
-                <div className={styles.rightHero}>
-                    <Carousel items={items} count={1} loop />
-                </div>
+            <div className={styles.logo}>
+                <Logo />
+                <span className={styles.typo}>ویتسل</span>
             </div>
-            <div className={styles.twoBanner}>
-                <div className={styles.banner}></div>
-                <div className={styles.banner}></div>
+            <Header />
+            <CarouselBanners />
+            <div className={styles.twoBanner1}>
+                <div className={styles.banner2}></div>
+                <div className={styles.banner1}></div>
             </div>
             <SectionTitle title="تخفیف های ویتسل" icon={<Ticket />} link="google" />
             <ProductList />
-            <div className={styles.twoBanner} style={{ margin: "60px 0px" }}>
-                <div className={styles.banner}></div>
-                <div className={styles.banner}></div>
+            <div className={styles.twoBanner2}>
+                <div className={styles.banner1}></div>
+                <div className={styles.banner2}></div>
             </div>
             <SectionTitle title="دسته بندی های محبوب" icon={<Category />} />
             <Categories />
@@ -49,20 +45,33 @@ export default function Home() {
             <Offers />
             <SectionTitle title="پرفروش ترین محصولات" icon={<Star />} link="google" />
             <ProductList />
-            <div className={styles.twoBanner} style={{ margin: "60px 0px" }}>
-                <div className={styles.leftBanner}></div>
+            <div className={styles.threeBanner}>
                 <div className={styles.rightBanner}></div>
-                <div className={styles.leftBanner}></div>
+                <div className={styles.leftBanner1}></div>
+                <div className={styles.leftBanner2}></div>
             </div>
             <div className={styles.download}>
                 <div className={styles.linksContainer}>
-                    <div dir="rtl"> ویتسل را همیشه همراه داشته باشید!</div>
-                    <div className={styles.links}>
-                        <div className={styles.link}>دانلود مستقیم </div>
-                        <div className={styles.link}> دانلود از مایکت</div>
-                        <div className={styles.link}>دانلود از بازار</div>
+                    <div dir="rtl" className={styles.title}>
+                        ویتسل را همیشه همراه داشته باشید!
                     </div>
-                    <div className={styles.linkBanner}></div>
+                    <div className={styles.links}>
+                        <div className={styles.link}>
+                            دانلود از بازار
+                            <Image src={bazar} alt="bazar" />
+                        </div>
+                        <div className={styles.link}>
+                            دانلود از مایکت
+                            <Image src={myket} alt="myket" />
+                        </div>
+                        <div className={styles.link}>
+                            دانلود مستقیم
+                            <Image src={android} alt="direct" />
+                        </div>
+                    </div>
+                    <div className={styles.linkBanner}>
+                        <Image src={mobile} alt="mobile" />
+                    </div>
                 </div>
             </div>
             <Footer />

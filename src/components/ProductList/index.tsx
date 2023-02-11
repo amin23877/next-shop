@@ -1,6 +1,11 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Carousel from "../CustomCarousel";
+
+import shoePic from "../../assets/mock/shoe.png";
+
+import styles from "./prodList.module.scss";
 
 export default function ProductList() {
     const ref = useRef<HTMLDivElement>(null);
@@ -13,123 +18,24 @@ export default function ProductList() {
         }
     }, []);
 
-    let items = [
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "blue",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "red",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "blue",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "red",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "blue",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "red",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "red",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "blue",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "blue",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "blue",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "blue",
-                border: "1px solid white",
-            }}
-        ></div>,
-        <div
-            key={Math.random()}
-            style={{
-                width: "190px",
-                height: "250px",
-                background: "green",
-                border: "1px solid white",
-            }}
-        ></div>,
-    ];
+    let items = Array.apply(null, Array(20)).map((_, i) => (
+        <div key={i} className={styles.product}>
+            <Image src={shoePic} alt="shoe" />
+            <div className={styles.priceSection}>
+                <div className={styles.price}>
+                    <span>تومان</span>
+                    <span className={styles.priceValue}>۴,۳۴۳,۰۰۰</span>
+                </div>
+                <div className={styles.discountSection}>
+                    <span className={styles.lastPrice}>۴,۳۴۳,۰۰۰</span>
+                    <span className={styles.discount}>34%</span>
+                </div>
+            </div>
+        </div>
+    ));
 
     return (
-        <div
-            ref={ref}
-            key={Math.random()}
-            style={{ width: "100%", height: "250px", borderRadius: "24px", overflow: "hidden" }}
-        >
+        <div ref={ref} className={styles.container}>
             <Carousel items={items} count={width / 190} />
         </div>
     );

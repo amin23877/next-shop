@@ -63,9 +63,39 @@
     flex: 1;
 }
 
+.icon {
+    display: none;
+}
 .navBtns {
     @include flex-center;
     gap: 8px;
     cursor: pointer;
     fill: $text;
+}
+@media (max-width: $medium) {
+    .right {
+        display: none;
+    }
+    .loginBtn {
+        display: none;
+    }
+    .headerContainer {
+        background: transparent;
+        box-shadow: none;
+        height: 50px;
+        width: 100%;
+        padding: 0px;
+    }
+    .search {
+        width: 213px;
+    }
+    .input {
+        max-width: 150px;
+    }
+    .basket {
+        background-color: transparent;
+    }
+    .icon {
+        display: inline;
+    }
 }

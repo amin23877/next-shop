@@ -1,0 +1,124 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixin.scss";
+
+.hero {
+    margin: 16px 0px;
+    display: flex;
+    height: 373px;
+    width: 100%;
+    gap: 16px;
+}
+.leftHero {
+    width: 282px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.rightHero {
+    width: calc(100% - 296px);
+    border-radius: 24px;
+    overflow: hidden;
+}
+.leftBanner {
+    width: calc(100vw - 536px);
+    height: 373px;
+    background: url(../../assets/mock/banner1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.rightBanner {
+    display: flex;
+    flex-direction: column;
+    background: $light-gray;
+    border-radius: 24px;
+    padding: 16px;
+    align-items: center;
+    position: relative;
+    height: 373px;
+    gap: 20px;
+}
+.rightBannerDesc {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.offer {
+    @include flex-bet;
+    padding: 12px;
+    gap: 4px;
+
+    height: 112px;
+
+    background: $light-gray;
+    border-radius: 24px;
+    position: relative;
+}
+
+.description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.name {
+    text-align: right;
+    font-weight: 900;
+    font-size: $title-size;
+}
+
+.priceSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+.price {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.discountSection {
+    @include flex-bet;
+    width: 100%;
+}
+.lastPrice {
+    text-decoration-line: line-through;
+    font-size: $big-size;
+    color: $disabled;
+}
+.priceValue {
+    font-size: $big-size;
+    font-weight: 900;
+    color: #333;
+}
+.discount {
+    @include flex-center;
+    padding: 4px 12px;
+
+    height: 30px;
+
+    background: $pink-linear;
+    border-radius: 80px;
+    color: white;
+}
+@media (max-width: $medium) {
+    .leftHero {
+        display: none;
+    }
+    .rightHero {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .leftBanner {
+        height: 160px;
+        width: calc(100vw - 32px);
+    }
+    .hero {
+        height: 160px;
+    }
+}

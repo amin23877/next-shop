@@ -52,17 +52,12 @@
         gap: 8px;
     }
     .cat {
-        width: 118px;
+        min-width: 118px;
+        flex: 1;
+        max-width: 140px;
     }
     .cats {
         gap: 8px;
         justify-content: center;
-    }
-}
-@media (max-width: 450px) {
-    .cats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
     }
 }

@@ -94,8 +94,15 @@
     }
     .basket {
         background-color: transparent;
+        width: auto;
+        margin-left: 10px;
     }
     .icon {
         display: inline;
+        @include flex-center;
+
+        height: 48px;
+
+        cursor: pointer;
     }
 }
